@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+}
+
+:root {
+    --button: #FF0000;
+    --main-background:  #C4C4C4;
+    --background: #E5E5E5;
+    --text: #000;
+    --footer: #000;
+    --text-description: #9C9696;
+
+    --font-family: 'Roboto', sans-serif;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+
+    font-family: var(--font-family);
+}
+
+.container {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+}
+
+.content-1 {
+    width: 40%;
+    background-color: var(--background);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-1 .description {
+    width: 35.7rem;
+}
+.content-1 .description header h1 {
+    font-size: 6rem;
+}
+
+.content-1 .description header p {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-description);
+    margin-top: 2.1rem;
+}
+
+.content-1 .description .value p {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 3.1rem;
+}
+
+.value button {
+    background-color: var(--button);
+    width: 27.4rem;
+    height: 9rem;
+
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #fff;
+
+    border: none;
+
+    margin-top: 3rem;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.value button:hover {
+    filter: invert();
+    box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, .5);
+}
+
+/* content 2 -------------------------------------------------------- */
+.content-2 {
+    width: 60%;
+    background-color: var(--main-background);
+}
+
+.content-2 .principal {
+    width: fit-content;
+    margin-inline: auto;
+
+    transition: .3s;
+}
+
+.content-2 .principal:hover {
+    transform: scale(1.1);
+}
+
+.content-2 .slider {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    background-color: none;
+}
+
+.content-2 .slider img {
+    position: relative;
+    transition: .3s;
+}
+
+.content-2 .slider img::before {
+    content: '';
+    display: block;
+    width: 10rem;
+    height: 4rem;
+    background-color: var(--button);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.content-2 .slider img {
+    border-bottom: .4rem solid var(--button);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+/* footer ----------------------------------------------------------- */
+footer {
+    width: 100%;
+    background-color: var(--background);
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    text-transform: uppercase;
+}
+
+footer .social {
+    display: flex;
+    gap: 3.9rem;
+    
+}
+
+footer .social a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+footer button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.7rem;
+    background-color: var(--footer);
+    font-size: 2.4rem;
+    color: #fff;
+
+    text-transform: uppercase;
+
+    height: 16.6rem;
+
+    padding-inline: 11.6rem;
+
+    border: none;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: red;
+
+    transition: all .3s;
+    animation: pulse infinite ease-in-out 2s;
+}
+
+footer button img {
+    width: 10%;
+
+    transition: all .3s;
+}
+
+footer button:hover img {
+    transform: rotate 45deg;
+    width: 30%;
+}
+
+.wrapper {
+    max-width: 144rem;
+    margin-inline: auto;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        background-color: var(--footer);
+    }
+    25% {
+        background-color: #FF0000;
+    }
+    75% {
+        background-color: var(--text-description);
+    }
+}
